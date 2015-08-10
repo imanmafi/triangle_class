@@ -1,0 +1,14 @@
+<h1>Is it a triangle?</h1>
+
+<% if @triangle.equilateral?() %>
+  <h5> It is an equilateral triangle!</h5>
+
+<% elsif @triangle.isosceles?() %>
+  <h5> It is an isosceles triangle!</h5>
+
+<% elsif @triangle.scalene?() %>
+  <h5> It is an scalene triangle!</h5>
+  
+<% else %>
+  <h5> It is not a triangle!</h5>
+<% end %>
