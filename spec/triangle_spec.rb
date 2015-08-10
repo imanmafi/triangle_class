@@ -12,5 +12,15 @@ describe(Triangle) do
       test_triangle = Triangle.new(2,2,3)
       expect(test_triangle.triangle?()).to(eq(true))
     end
+
+    it("returns false if all sides are not equal") do
+      test_triangle = Triangle.new(4,4,3)
+      expect(test_triangle.equilateral?()).to(eq(false))
+    end
+
+    it("returns true if all sides are equal") do
+      test_triangle = Triangle.new(4,4,4)
+      expect(test_triangle.equilateral?()).to(eq(true))
+    end
   end
 end
