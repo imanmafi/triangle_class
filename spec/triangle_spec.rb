@@ -32,4 +32,15 @@ describe(Triangle) do
       test_triangle = Triangle.new(4,3,4)
       expect(test_triangle.isosceles?()).to(eq(true))
   end
+
+    it("returns false if any of the sides match") do
+    test_triangle = Triangle.new(4,3,4)
+    expect(test_triangle.scalene?()).to(eq(false))
+    end
+
+    it("returns true if none of the sides match") do
+      test_triangle = Triangle.new(4,3,2)
+      expect(test_triangle.scalene?()).to(eq(true))
+    end
+  end
 end

@@ -23,5 +23,13 @@ class Triangle
       else
         false
       end
+    end
+
+  define_method(:scalene?) do
+    if @side1 == @side2 || @side2 == @side3 || @side1 == @side3
+      false
+    else
+      true
+    end
   end
 end
