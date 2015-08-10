@@ -22,5 +22,14 @@ describe(Triangle) do
       test_triangle = Triangle.new(4,4,4)
       expect(test_triangle.equilateral?()).to(eq(true))
     end
+
+    it("returns false if 2 sides do not match") do
+      test_triangle = Triangle.new(4,3,2)
+      expect(test_triangle.isosceles?()).to(eq(false))
+    end
+
+    it("returns true if 2 sides do match") do
+      test_triangle = Triangle.new(4,3,4)
+      expect(test_triangle.isosceles?()).to(eq(true))
   end
 end
