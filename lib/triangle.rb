@@ -6,6 +6,6 @@ class Triangle
 end
 
 define_method(:triangle?) do
-  false
+  @length+@width > @height  
   end
 end
